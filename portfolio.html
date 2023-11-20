@@ -7,6 +7,9 @@
     <script src="https://kit.fontawesome.com/76a0451c5c.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
+        *{
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
         .bgcolor{
             background-color: rgb(206, 60, 136);
         }
@@ -18,31 +21,71 @@
         #hamburger:focus{
             box-shadow: 0px 0px 7px rgba(123, 7, 80, 0.5);
         }
+        @media (max-width: 450px){
+            h3{
+                font-size: 20px;
+            }
+            h4{
+                font-size: 18px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+        .slika{
+            max-width: 200px;
+            border-radius: 50%;
+            transition: all 0.2 ease;
+        }
+        .slika:hover{
+            box-shadow: 0px 0px 20px black;
+            transition: all 0.2s ease;
+        }
+        .o-meni:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 12px 0 rgba(123, 7, 80, 0.5);
+            background: linear-gradient(rgb(245, 228, 182), rgb(244, 177, 211));
+            transition: all 0.3s ease, opacity 0.5s ease;
+        }
+        
     </style>
 </head>
 <body>
-    <header> 
+    <header class="sticky-top"> 
         <nav class="navbar navbar-light bgcolor navbar-expand-sm">
             <button class="navbar-toggler" id="hamburger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>              
             <div class="justify-content-center align-items-center collapse navbar-collapse">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav gap gap-md-2 gap-lg-4">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#">Početna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">O meni</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="#">Postignuća</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Kontakt</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
+    <div class="d-flex justify-content-center align-items-center p-5">
+        <h3><b>Dobrodošli na moj Portfolio</b></h3>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center o-meni p-5">
+        <img src="ja.jpg" class="slika"/>
+        <h4 class="pt-3"><b>Natalija Mitrović</b></h4>
+        <p class="text-center">
+            Zdravo!<br>
+            Ja sam Natalija Mitrović, učenica 4. razreda Prve kragujevačke gimnazije, odeljenja učenika sa posebnim sposobnostima za računarstvo i informatiku.<br>
+            Rođena sam u Leskovcu 23.12.2005. godine, a živim u Batočini.<br>
+            Ovo je moj portfolio na kome možete videti sva moja interesovanja, iskustva i postignuća.
+        </p>
+    </div>
 </body>
 </html>

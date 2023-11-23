@@ -10,8 +10,12 @@
         *{
             font-family: 'Arial', 'Helvetica', sans-serif;
         }
-        .bgcolor{
-            background-color: rgb(206, 60, 136);
+        body{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #navbar-color{
+            background-color: rgb(208, 96, 154);
         }
         #hamburger{
             margin-left: 0.5rem;
@@ -26,66 +30,100 @@
                 font-size: 20px;
             }
             h4{
-                font-size: 18px;
+                font-size: 17px;
             }
             p{
-                font-size: 15px;
+                font-size: 14px;
+            }
+            #moja-slika{
+                max-width: 140px;
+                height: auto;
+                transition: all 0.3 ease-in-out;
+                align-items: center;
+                display: block;
             }
         }
         .slika{
-            max-width: 200px;
+            max-width: 180px;
             border-radius: 50%;
             transition: all 0.2 ease;
         }
         .slika:hover{
             box-shadow: 0px 0px 20px black;
             transition: all 0.2s ease;
+            font-size: 20px;
         }
-        .o-meni:hover{
-            transform: scale(1.1);
-            box-shadow: 0 0 12px 0 rgba(123, 7, 80, 0.5);
+        .drugidiv:hover{
+            box-shadow: 0 0 15px 0 rgba(123, 7, 80, 0.7);
             background: linear-gradient(rgb(245, 228, 182), rgb(244, 177, 211));
             transition: all 0.3s ease, opacity 0.5s ease;
         }
-        
+        .nav-item:hover{
+            color: white;
+            font-weight: bold;
+            font-stretch: expanded;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .prvidiv{
+            width: 100%;
+            background-image: url(pozadina.png);
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
     <header class="sticky-top"> 
-        <nav class="navbar navbar-light bgcolor navbar-expand-sm">
-            <button class="navbar-toggler" id="hamburger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-light navbar-expand-sm" id="navbar-color">
+            <button class="navbar-toggler" id="hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>              
-            <div class="justify-content-center align-items-center collapse navbar-collapse">
-                <ul class="navbar-nav gap gap-md-2 gap-lg-4">
+            <div class="justify-content-center align-items-center collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav gap gap-md-3 gap-lg-5 align-items-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Početna</a>
+                        <a class="nav-link" href="#pocetna">Početna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">O meni</a>
+                        <a class="nav-link" href="#omeni">O meni</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Postignuća</a>
+                        <a class="nav-link" href="#postignuca">Postignuća</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kontakt</a>
+                        <a class="nav-link" href="#ciljevi">Ciljevi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontakt">Kontakt</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="d-flex justify-content-center align-items-center p-5">
-        <h3><b>Dobrodošli na moj Portfolio</b></h3>
+    <div class="d-flex justify-content-center align-items-center prvidiv">
+        <div class="welcome">
+            <h3 class="pt-2" style="color: rgba(123, 7, 80)"><b>Dobrodošli na moj Portfolio!</b></h3>
+        </div>
     </div>
-    <div class="d-flex flex-column justify-content-center align-items-center o-meni p-5">
-        <img src="ja.jpg" class="slika"/>
+    <div class="d-flex flex-column justify-content-center align-items-center p-5 drugidiv">
+        <img src="ja.jpg" class="slika" id="moja-slika"/>
         <h4 class="pt-3"><b>Natalija Mitrović</b></h4>
-        <p class="text-center">
+        <p class="text-center mb-0">
             Zdravo!<br>
             Ja sam Natalija Mitrović, učenica 4. razreda Prve kragujevačke gimnazije, odeljenja učenika sa posebnim sposobnostima za računarstvo i informatiku.<br>
             Rođena sam u Leskovcu 23.12.2005. godine, a živim u Batočini.<br>
-            Ovo je moj portfolio na kome možete videti sva moja interesovanja, iskustva i postignuća.
+            Ovo je moj portfolio na kome možete videti sva moja iskustva, postignuća kao i dalje ciljeve na poljima programiranja.
         </p>
     </div>
+    <div class="d-flex justify-content-center align-items-center prvidiv">
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center trecidiv">
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

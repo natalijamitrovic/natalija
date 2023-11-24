@@ -35,6 +35,17 @@
             #mala-slika{
                 max-width: 80px;
             }
+            #pocetna, #pozadinadiv{
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            #pozadina-manjidiv{
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+            .paragraf{
+                flex-wrap: wrap;
+            }
         }
         @media (max-width: 450px){
             h3{
@@ -53,11 +64,19 @@
                 align-items: center;
                 display: block;
             }
+            #logo{
+                max-width: 100px;
+                max-height: 100px;
+            }
             input{
                 max-width: 200px;
             }
             textarea{
                 max-width: 200px;
+            }
+            #pocetna, #pozadinadiv{
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
         }
         #moja-slika{
@@ -65,24 +84,34 @@
             border-radius: 50%;
         }
         #logo{
-            max-width: 180px;
+            max-width: 150px;
+            max-height: 150px;
             border-radius: 50%;
             transition: all 0.2 ease;
         }
-        #moja-slika:hover{
+        #moja-slika:hover, #logo:hover, .ikonica:hover{
             box-shadow: 0px 0px 20px black;
             transition: all 0.2s ease;
             transform: scale(1.03);
-            font-size: 20px;
         }
-        .drugidiv:hover{
+        #omeni:hover{
             box-shadow: 0 0 15px 0 rgba(123, 7, 80, 0.7);
             background: linear-gradient(rgb(244, 177, 211), rgb(245, 228, 182));
             transition: all 0.3s ease, opacity 0.5s ease;
         }
-        .trecidiv:hover{
+        #postignuca:hover{
             box-shadow: 0 0 15px 0 rgba(123, 7, 80, 0.7);
             background: linear-gradient(rgb(245, 228, 182), rgb(168, 145, 171));
+            transition: all 0.3s ease, opacity 0.5s ease;
+        }
+        #ciljevi:hover{
+            box-shadow: 0 0 15px 0 rgba(123, 7, 80, 0.7);
+            background: linear-gradient(rgb(168, 145, 171), rgb(174, 209, 202));
+            transition: all 0.3s ease, opacity 0.5s ease;
+        }
+        #zanimljivosti:hover{
+            box-shadow: 0 0 15px 0 rgba(123, 7, 80, 0.7);
+            background: linear-gradient(rgb(174, 209, 202), rgb(244, 177, 211));
             transition: all 0.3s ease, opacity 0.5s ease;
         }
         .nav-item:hover{
@@ -94,7 +123,7 @@
             text-decoration: underline;
             transition: all 0.3s ease;
         }
-        .prvidiv{
+        #pocetna, #pozadinadiv{
             width: 100%;
             background-image: url(pozadina.png);
             padding-top: 100px;
@@ -104,11 +133,19 @@
             background-attachment: fixed;
             background-size: cover;
         }
-        .malidiv{
+        #pozadina-manjidiv{
             width: 100%;
             background-image: url(pozadina.png);
-            padding-top: 7px;
-            padding-bottom: 7px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #kontakt{
+            width: 100%;
+            background-image: url(pozadina.png);
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -148,13 +185,6 @@
             color: rgba(123, 7, 80);
             text-align: center;
             padding: 1rem 0;
-        }
-        footer ul{
-            list-style-type: none;
-        }
-        footer li{
-            display: inline;
-            margin: 0 1rem;
         }
         footer a{
             text-decoration: none;
@@ -200,26 +230,26 @@
             </div>
         </nav>
     </header>
-    <div class="d-flex justify-content-center align-items-center prvidiv">
+    <div class="d-flex justify-content-center align-items-center" id="pocetna">
         <div class="welcome">
             <h3 class="pt-2" style="color: rgba(123, 7, 80)"><b>Dobrodošli na moj Portfolio!</b></h3>
         </div>
     </div>
-    <div class="d-flex flex-column justify-content-center align-items-center p-5 drugidiv">
+    <div class="d-flex flex-column justify-content-center align-items-center p-3 p-md-5 p-sm-3" id="omeni">
         <img src="ja.jpg" id="moja-slika"/>
         <h4 class="pt-3"><b>Natalija Mitrović</b></h4>
-        <p class="text-center mb-0">
+        <p class="text-md-center mb-0 text-sm-start">
             Zdravo!<br>
             Ja sam Natalija Mitrović, učenica 4. razreda Prve kragujevačke gimnazije, odeljenja učenika sa posebnim sposobnostima za računarstvo i informatiku.<br>
             Rođena sam u Leskovcu 23.12.2005. godine, a živim u Batočini.<br>
             Ovo je moj portfolio na kome možete videti sva moja iskustva, postignuća kao i dalje ciljeve na poljima programiranja.
         </p>
     </div>
-    <div class="d-flex justify-content-center align-items-center prvidiv">
+    <div class="d-flex justify-content-center align-items-center" id="pozadinadiv">
     </div>
-    <div class="d-flex flex-column justify-content-center align-items-center p-5 trecidiv">
+    <div class="d-flex flex-column justify-content-center align-items-center p-3 p-md-5 p-sm-3" id="postignuca">
         <h4 class="pt-2"><b>Postignuća</b></h4>
-        <p class="text-center mb-0">
+        <p class="text-md-center mb-0 text-sm-start">
             Moja postignuća u programiranju u skladu su sa onim što sam u školi i ovo smeru naučila za skoro 4 godine koliko je pohađam.<br>
             Za ove 4 godine prošli smo različite grane i vrste programiranja i to:<br>
             - Programiranje u Python-u (1. godina);<br>
@@ -234,30 +264,48 @@
             - Baze podataka<br>
             - Programske Paradigme<br>
         </p>
-        <div class="row row-cols-auto gap-4 pt-5 justify-content-center align-items-center">
-            <div class="d-flex flex-column"><img src="python.jpg" class="ikonica" id="mala-slika"></div>
-            <div class="d-flex flex-column"><img src="c++.jpg" class="ikonica" id="mala-slika"></div>
-            <div class="d-flex flex-column"><img src="cs.jpg" class="ikonica" id="mala-slika"></div>
-            <div class="d-flex flex-column"><img src="html.jpg" class="ikonica" id="mala-slika"></div>
-            <div class="d-flex flex-column"><img src="css.jpg" class="ikonica" id="mala-slika"></div>
+        <div class="row row-cols-auto gap-md-4 gap-sm-1 pt-3 pt-md-5 pt-sm-3 justify-content-center align-items-center">
+            <div class="d-flex flex-column"><a href="https://www.python.org/"><img src="python.jpg" class="ikonica" id="mala-slika"></a></div>
+            <div class="d-flex flex-column"><a href="https://isocpp.org/"><img src="c++.jpg" class="ikonica" id="mala-slika"></a></div>
+            <div class="d-flex flex-column"><a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><img src="cs.jpg" class="ikonica" id="mala-slika"></a></div>
+            <div class="d-flex flex-column"><a href="https://html.spec.whatwg.org/dev/"><img src="html.jpg" class="ikonica" id="mala-slika"></a></div>
+            <div class="d-flex flex-column"><a href="https://www.w3.org/TR/CSS/#css"><img src="css.jpg" class="ikonica" id="mala-slika"></a></div>
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center malidiv">
+    <div class="d-flex justify-content-center align-items-center" id="pozadina-manjidiv">
     </div>
-    <div class="d-flex flex-column justify-content-center align-items-center cetvrtidiv">
+    <div class="d-flex flex-column justify-content-center align-items-center p-3 p-md-5 p-sm-3" id="ciljevi">
         <h4 class="pt-2"><b>Ciljevi</b></h4>
+        <p class="text-md-center text-sm-start">
+            Što se tiče mojih ciljeva za dalji napredak, trenutno je na prvom planu završiti školu sa uspehom kao i do sada i naravno upisati fakultet i nastaviti sa unapređivanjem svog znanja iz oblasti informatike i programiranja. 
+        </p>
     </div>
-    <div class="d-flex flex-column petidiv">
+    <div class="d-flex justify-content-center align-items-center" id="pozadina-manjidiv">
+    </div>
+    <div class="d-flex flex-column petidiv p-3 p-md-5 p-sm-3" id="zanimljivosti">
         <div class="d-flex flex-column justify-content-center align-items-center">
             <h4 class="pt-2"><b>Zanimljivosti</b></h4>
         </div>
-        <div class="d-flex flex-row">
-            <img src="logo.jpg" class="slika m-3" id="logo"/>
+        <div class="d-flex flex-row paragraf">
+            <p class="d-flex flex-column text-start pe-3">
+                Jedna od zanimljivosti o meni jeste ta da sam sa oko 11 godina napravila svoj mali biznis.<br>
+                <br>
+                Kao mala bila sam kreativna, svakog dana sam volela da napravim ponešto sama od papira, kartona ili nekih drugih materijala, uživala sam u tome.<br>
+                U međuvremenu postali su aktuelni slime-ovi ili ljigavci kako ih neki zovu. Naravno mene je to privuklo, u početku je to bila samo kupovina već napravljenih slime-ova u prodavnici, a kasnije je to preraslo u biznis i samostalno pravljenje različitih vrsta slime-ova i prodaja istih.<br>
+                <br>
+                Ovaj mali biznis tekao je prilično dobro za mene tada u tim godinama. Imala sam i svoju instagram stranicu preko koje sam objavljivala zanimljive slike i videe slime-ova i vršila prodaju.<br>
+                <br>
+                Instagram stranica je i dalje tu, ali je više ne koristim od kako sam prekinula svoj mali biznis kada sam krenula u srednju školu.<br>
+                Naravno ja sam sada sve ovo prerasla, ali je ovo bio jedan zanimljiv period mog života koji nisam mogla da ne podelim. 
+            </p>
+            <div class="d-flex flex-column">
+                <img src="logo.jpg" class="m-3" id="logo"/>
+            </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center prvidiv">
+    <div class="d-flex justify-content-center align-items-center" id="pozadinadiv">
     </div>
-    <div class="d-flex flex-column justify-content-center align-items-center petidiv">
+    <div class="d-flex flex-column justify-content-center align-items-center" id="kontakt">
         <h4 class="pt-3"><b>Kontakt</b></h4>
         <div class="contact-form">
             <form class="">
@@ -266,17 +314,17 @@
                 <label for="email">Email</label>
                 <input type="email" id="email" class="soft" name="email" required placeholder="Unesite vaš email ovde..."/>
                 <label for="message">Poruka</label>
-                <textarea id="message" class="soft" name="message" rows="6" required placeholder="Vaša poruka..."></textarea>
+                <textarea id="message" class="soft" name="message" rows="5" required placeholder="Vaša poruka..."></textarea>
                 <input type="submit" class="soft" value="Pošalji"/>
             </form>
         </div>
     </div>
-    <footer>
-        <p class="ms-4"> &copy; 2023 My Portfolio</p>
-        <ul>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
+    <footer class="justify-content-center align-items-center">
+        <p class="d-flex flex-column"> &copy; 2023 My Portfolio</p>
+        <div class="d-flex flex-row justify-content-center align-items-center ps-2 pe-2">
+            <div class="d-flex flex-column pe-2"><a href="#">Terms of Service</a></div>
+            <div class="d-flex flex-column pe-2"><a href="#">Privacy Policy</a></div>
+        </div>
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

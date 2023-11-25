@@ -89,6 +89,14 @@
             border-radius: 50%;
             transition: all 0.2 ease;
         }
+        .socials{
+            max-width: 50px;
+        }
+        .socials:hover{
+            transform: scale(1.1);
+            transition: all 0.1s ease-in-out;
+            
+        }
         #moja-slika:hover, #logo:hover, .ikonica:hover{
             box-shadow: 0px 0px 20px black;
             transition: all 0.2s ease;
@@ -124,26 +132,14 @@
             transition: all 0.3s ease;
         }
         #pocetna, #pozadinadiv{
-            width: 100%;
-            background-image: url(pozadina.png);
             padding-top: 100px;
             padding-bottom: 100px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
         }
         #pozadina-manjidiv{
-            width: 100%;
-            background-image: url(pozadina.png);
             padding-top: 10px;
             padding-bottom: 10px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
         }
-        #kontakt{
+        #kontakt, #pocetna, #pozadinadiv, #pozadina-manjidiv{
             width: 100%;
             background-image: url(pozadina.png);
             background-repeat: no-repeat;
@@ -164,6 +160,8 @@
         }
         input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
             box-shadow: inset 0px 0px 1rem rgb(218, 100, 161);
+            border: 0;
+            outline: none;
         }
         input[type="submit"]{
             background-color: #333;
@@ -298,8 +296,14 @@
                 Instagram stranica je i dalje tu, ali je više ne koristim od kako sam prekinula svoj mali biznis kada sam krenula u srednju školu.<br>
                 Naravno ja sam sada sve ovo prerasla, ali je ovo bio jedan zanimljiv period mog života koji nisam mogla da ne podelim. 
             </p>
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column justify-content-center align-items-center">
                 <img src="logo.jpg" class="m-3" id="logo"/>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <p class="mb-0">
+                    instagram:
+                </p>
+                <a href="https://www.instagram.com/chocolate.slime.rs/"><img src="instagram.png" class="ms-3 me-3 socials"/></a>
             </div>
         </div>
     </div>
@@ -308,7 +312,7 @@
     <div class="d-flex flex-column justify-content-center align-items-center" id="kontakt">
         <h4 class="pt-3"><b>Kontakt</b></h4>
         <div class="contact-form">
-            <form class="">
+            <form>
                 <label for="name">Ime</label>
                 <input type="text" id="name" class="soft" name="name" required placeholder="Unesite vaše ime ovde..."/>
                 <label for="email">Email</label>
